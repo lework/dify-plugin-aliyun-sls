@@ -1,0 +1,47 @@
+version: 0.0.2
+type: plugin
+author: lework
+name: aliyun-sls
+label:
+  en_US: Aliyun-SLS
+  ja_JP: 阿里云SLS
+  zh_Hans: 阿里云SLS
+  pt_BR: Aliyun-SLS
+description:
+  en_US: Query Aliyun SLS logs
+  ja_JP: クエリ阿里云SLSログ
+  zh_Hans: 查询阿里云SLS日志
+  pt_BR: Query Aliyun SLS logs
+icon: icon.svg
+resource:
+  memory: 268435456
+  permission:
+    model:
+      enabled: true
+      llm: true
+      text_embedding: true
+      rerank: false
+      tts: false
+      speech2text: false
+      moderation: false
+    app:
+      enabled: true
+    storage:
+      enabled: true
+      size: 1048576
+plugins:
+  tools:
+    - provider/aliyun-sls.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: '3.12'
+    entrypoint: main
+created_at: 2025-03-06T10:54:35.6758304+08:00
+privacy: PRIVACY.md
+repo: https://github.com/lework/dify-plugin-aliyun-sls.git
+verified: false
